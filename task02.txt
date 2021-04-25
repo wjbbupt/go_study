@@ -1,0 +1,6 @@
+/*
+	@bref doc层遇到dao 层中当遇到一个 sql.ErrNoRows 的时候，是否应该 Wrap 这个 error，抛给上层。
+    只处理一次，不要到处抛
+    查询sql 数据要是为空    可以使用db查询返回中的err  是否等于orm.ErrNoRows
+ */
+var ErrNoRows =errors.New("<QuerySeter> no row found")//查询结果直接返回全局变量-ErrNoRows
